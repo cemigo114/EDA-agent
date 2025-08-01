@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Demo outputs
+demo_output/
+demo_reports/
+batch_demo_reports/
+reports/
+
+# EDA tool outputs
+*.vcd
+*.vvp
+*.out
+*.wlf
+*.vstf
+*.wdb
+obj_dir/
+work/
+*.cr.mti
+*.mpf
+*.qpg
+*.qws
+*.rpt
+*.smsg
+*.summary
+*.log
+*.jou
+*.str
+*.xpr
+*.cache/
+*.runs/
+*.sim/
+*.ip_user_files/
+
+# Synthesis outputs
+*.edif
+*.ngc
+*.bit
+*.mcs
+*.ltx
+*.dcp
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db

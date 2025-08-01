@@ -1,0 +1,109 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-fifo-eda"
+version = "0.1.0"
+description = "Autonomous AI system for FIFO design and verification using multi-agent collaboration"
+authors = [{name = "Yuchen", email = "yuchen@exostellar.ai"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = ["eda", "fifo", "systemverilog", "ai", "agents", "verification"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+
+dependencies = [
+    "pydantic>=2.0.0",
+    "pydantic-ai>=0.0.9",
+    "openai>=1.0.0",
+    "anthropic>=0.40.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "jinja2>=3.1.0",
+    "pyyaml>=6.0",
+    "psutil>=5.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+]
+viz = [
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.17.0",
+    "graphviz>=0.20.0",
+]
+eda = [
+    "cocotb>=1.8.0",
+    "hdlparse>=1.0.4",
+    "pyrtl>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/exostellar/agentic-fifo-eda"
+Documentation = "https://github.com/exostellar/agentic-fifo-eda/docs"
+Repository = "https://github.com/exostellar/agentic-fifo-eda"
+Issues = "https://github.com/exostellar/agentic-fifo-eda/issues"
+
+[project.scripts]
+agentic-fifo = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agents*", "tools*", "verification*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+  | rtl
+  | verification
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["."]

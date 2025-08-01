@@ -1,0 +1,8 @@
+# EDA Agent Dependencies
+# Core dependencies for the Agentic AI-Powered FIFO Design and Verification System
+
+# Data validation and parsing
+pydantic>=2.0.0
+
+# Async and typing support
+typing-extensions>=4.0.0
