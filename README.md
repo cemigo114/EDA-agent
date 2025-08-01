@@ -1,6 +1,6 @@
 # 🤖 Agentic AI-Powered FIFO Design and Verification System
 
-An autonomous EDA (Electronic Design Automation) system that uses multi-agent AI collaboration to design, implement, and verify SystemVerilog FIFO buffers from natural language requirements.
+An autonomous EDA system that uses multi-agent AI collaboration to design, implement, and verify SystemVerilog FIFO buffers from natural language requirements.
 
 ## 🎯 Key Features
 
